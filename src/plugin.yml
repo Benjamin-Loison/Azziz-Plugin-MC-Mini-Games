@@ -1,0 +1,12 @@
+name: AzzizCouscous
+main: fr.azzizcouscous.benjaminloison.main.Main
+version: 1.0.0
+author: Benjamin Loison
+description: Plugin for Azziz Couscous
+commands:
+  skywar:
+    description: SkyWar Manager
+    usage: /skywar <add/remove/join/leave> <map> [minimalPlayer] [X0;Y0;Z0] [...]
+
+# <>: needed for all commands
+# []: needed for some commands
