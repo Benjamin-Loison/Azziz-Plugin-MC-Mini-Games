@@ -38,9 +38,9 @@ public class SkyWar
                     int playersNeeded = playersNeeded();
                     if(playersNeeded != 0)
                         if(playersNeeded == 1)
-                            p.sendMessage(Language.translate("§bPlease wait §e" + playersNeeded + "§b player..."));
+                            p.sendMessage(Language.translate("§bPlease wait §e") + playersNeeded + Language.translate("§b player..."));
                         else
-                            p.sendMessage(Language.translate("§bPlease wait §e" + playersNeeded + "§b players..."));
+                            p.sendMessage(Language.translate("§bPlease wait §e") + playersNeeded + Language.translate("§b players..."));
                     else
                         start();
                 }
