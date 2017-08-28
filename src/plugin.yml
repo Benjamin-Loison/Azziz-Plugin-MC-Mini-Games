@@ -6,7 +6,8 @@ description: Plugin for Azziz Couscous
 commands:
   skywar:
     description: SkyWar Manager
-    usage: /skywar <add/remove/join/leave> <map> [minimalPlayer] [X0;Y0;Z0] [...]
+    usage: /skywar <add/remove/join/leave> [map] [XG;YG;ZG] [X0;Y0;Z0] [...]
 
+depends: [WorldEdit]
 # <>: needed for all commands
 # []: needed for some commands

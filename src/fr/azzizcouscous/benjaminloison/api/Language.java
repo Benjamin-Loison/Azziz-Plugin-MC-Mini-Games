@@ -1,6 +1,7 @@
 package fr.azzizcouscous.benjaminloison.api;
 
 import java.io.FileNotFoundException;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -8,8 +9,8 @@ import fr.azzizcouscous.benjaminloison.main.Main;
 
 public class Language
 {
-    private static String example = "\"something not translated=Something translated\"";
-    static Map<String, String> translations;
+    private static String example = "// <-- Use this to do a comment\n" + "// Find here the color codes: http://j.gs/9KIx" + "\n§4Something not translated=§2Something translated";
+    static Map<String, String> translations = new HashMap<String, String>();
 
     public static void initialize()
     {
@@ -22,14 +23,16 @@ public class Language
     {
         try
         {
-            Scanner scan = new Scanner(FileAPI.languageFile);
+            Scanner scan = new Scanner(FileAPI.languageFile, "UTF-8");
             int lineNumber = 0;
             while(scan.hasNextLine())
             {
                 String line = scan.nextLine(), parts[] = line.split("=");
                 lineNumber++;
+                if(line.startsWith("//"))
+                    continue;
                 if(parts.length != 2)
-                    Main.warn("Invalid translation in line (" + lineNumber + "): " + line + " | Must be like this: " + example);
+                    Main.warn(translate("Invalid translation in line (") + lineNumber + translate("): ") + line + translate(" | Must be like this: ") + example);
                 translations.put(parts[0], parts[1]);
             }
             scan.close();
@@ -45,10 +48,6 @@ public class Language
     {
         if(translations.containsKey(base))
             return translations.get(base);
-        else
-        {
-            Main.warn("No translation found for: " + base);
-            return base;
-        }
+        return base;
     }
 }
