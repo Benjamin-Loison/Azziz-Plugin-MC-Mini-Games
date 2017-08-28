@@ -20,7 +20,7 @@ public class Main extends JavaPlugin
     public static Main plugin;
     public static EventController eventController;
 
-	@Override
+    @Override
     public void onEnable()
     {
         plugin = this;
