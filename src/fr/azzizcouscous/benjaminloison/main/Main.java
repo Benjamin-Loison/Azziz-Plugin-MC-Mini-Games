@@ -24,8 +24,6 @@ public class Main extends JavaPlugin
     public void onEnable()
     {
         plugin = this;
-        if(!new File("").getAbsolutePath().contains((char)65 + "" + (char)122 + "" + (char)122 + "" + (char)105 + "" + (char)122 + "" + (char)95 + "" + (char)67 + "" + (char)111 + "" + (char)117 + "" + (char)115 + "" + (char)99 + "" + (char)111 + "" + (char)117 + "" + (char)115))
-            Throwables.propagate(new Throwable("Server non authorized !"));
         if(getWorldEdit() == null)
         {
             fatal("WORLDEDIT PLUGIN IS REQUIRED");
