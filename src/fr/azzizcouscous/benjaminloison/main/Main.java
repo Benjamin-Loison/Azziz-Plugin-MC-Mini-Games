@@ -1,18 +1,16 @@
 package fr.azzizcouscous.benjaminloison.main;
 
-import java.io.File;
 import java.util.logging.Logger;
 
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import com.google.common.base.Throwables;
 import com.sk89q.worldedit.bukkit.WorldEditPlugin;
 
 import fr.azzizcouscous.benjaminloison.api.Consequence;
 import fr.azzizcouscous.benjaminloison.api.FileAPI;
 import fr.azzizcouscous.benjaminloison.api.Language;
-import fr.azzizcouscous.benjaminloison.skywar.SkyWarManager;
+import fr.azzizcouscous.benjaminloison.game.GameManager;
 
 public class Main extends JavaPlugin
 {
@@ -32,7 +30,7 @@ public class Main extends JavaPlugin
         }
         FileAPI.initialize();
         Language.initialize();
-        SkyWarManager.initialize();
+        GameManager.initialize();
         eventController = new EventController();
         info(Language.translate("Launched !"));
     }
@@ -42,7 +40,7 @@ public class Main extends JavaPlugin
     {
         info(Language.translate("Disabled !"));
     }
-    
+
     public WorldEditPlugin getWorldEdit()
     {
         Plugin plugin = getServer().getPluginManager().getPlugin("WorldEdit");
@@ -68,17 +66,17 @@ public class Main extends JavaPlugin
                 break;
         }
     }
-    
+
     public static void info(Object object)
     {
         print(object, Consequence.Info);
     }
-    
+
     public static void warn(Object object)
     {
         print(object, Consequence.Warn);
     }
-    
+
     public static void fatal(Object object)
     {
         print(object, Consequence.Fatal);

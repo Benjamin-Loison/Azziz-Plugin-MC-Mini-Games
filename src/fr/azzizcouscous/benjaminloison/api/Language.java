@@ -9,7 +9,7 @@ import fr.azzizcouscous.benjaminloison.main.Main;
 
 public class Language
 {
-    private static String example = "// <-- Use this to do a comment\n" + "// Find here the color codes: http://j.gs/9KIx" + "\n§4Something not translated=§2Something translated";
+    private static final String line = "§4Something not translated=§2Something translated", example = "// <-- Use this to do a comment\n" + "// Find here the color codes: http://j.gs/9KIx" + "\n" + line;
     static Map<String, String> translations = new HashMap<String, String>();
 
     public static void initialize()
@@ -29,7 +29,7 @@ public class Language
             {
                 String line = scan.nextLine(), parts[] = line.split("=");
                 lineNumber++;
-                if(line.startsWith("//"))
+                if(line.startsWith("//") || line.isEmpty())
                     continue;
                 if(parts.length != 2)
                     Main.warn(translate("Invalid translation in line (") + lineNumber + translate("): ") + line + translate(" | Must be like this: ") + example);

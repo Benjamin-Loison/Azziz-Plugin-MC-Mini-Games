@@ -4,10 +4,12 @@ version: 1.0.0
 author: Benjamin Loison
 description: Plugin for Azziz Couscous
 commands:
-  skywar:
-    description: SkyWar Manager
-    usage: /skywar <add/remove/join/leave> [map] [XG;YG;ZG] [X0;Y0;Z0] [...]
+  game:
+    description: Game manager
+    aliases: [ge]
+
+  group:
+    description: Group manager
+    aliases: [gp]
 
 depends: [WorldEdit]
-# <>: needed for all commands
-# []: needed for some commands
