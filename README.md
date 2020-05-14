@@ -1,4 +1,4 @@
-# Azziz-Plugin-MC-Mini-Games
+# Azziz plugin Minecraft mini-games
 
 Source code of a plugin coded by myself for Azziz Couscous.
 
