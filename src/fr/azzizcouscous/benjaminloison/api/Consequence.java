@@ -1,4 +1,4 @@
-package fr.azzizcouscous.benjaminloison.api;
+package fr.mcminigames.benjaminloison.api;
 
 public enum Consequence
 {
