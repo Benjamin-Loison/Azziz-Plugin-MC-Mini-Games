@@ -1,4 +1,4 @@
-package fr.azzizcouscous.benjaminloison.game;
+package fr.mcminigames.benjaminloison.game;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -8,9 +8,9 @@ import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.PlayerInventory;
 
-import fr.azzizcouscous.benjaminloison.api.Language;
-import fr.azzizcouscous.benjaminloison.group.Group;
-import fr.azzizcouscous.benjaminloison.group.GroupManager;
+import fr.mcminigames.benjaminloison.api.Language;
+import fr.mcminigames.benjaminloison.group.Group;
+import fr.mcminigames.benjaminloison.group.GroupManager;
 
 public class Game
 {
