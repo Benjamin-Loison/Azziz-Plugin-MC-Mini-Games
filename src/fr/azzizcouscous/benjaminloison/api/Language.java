@@ -1,11 +1,11 @@
-package fr.azzizcouscous.benjaminloison.api;
+package fr.mcminigames.benjaminloison.api;
 
 import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-import fr.azzizcouscous.benjaminloison.main.Main;
+import fr.mcminigames.benjaminloison.main.Main;
 
 public class Language
 {
